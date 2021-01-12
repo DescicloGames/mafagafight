@@ -16,13 +16,15 @@ import * as Global from "../global";
     this.done = false;
     this.animation = null;
 
-    this.title = new PIXI.Text(this.translate["title"],{ fill: 0xFA8916 });
+    this.title = new PIXI.Text(this.translate["title"],{ fill: 0xFA8916, fontSize: 18 });
     this.title.anchor.set(0.5, 0.5); //parecido com imagem.pivot
     this.title.position.set(Global.screen.width / 2, 55);
 
     this.popup = new PIXI.NineSlicePlane(Global.loader.resources["./assets/gui/popup.png"].texture,64,64,64,64);
     this.updateSize(1,1);
     this.popup.position.set(Global.screen.width / 2, Global.screen.height / 2);
+    this.popup.tint = 0x555555;
+
   }
 
    draw() {
