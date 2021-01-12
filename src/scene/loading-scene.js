@@ -2,7 +2,7 @@ import * as Global from "../global";
 import * as PIXI from "pixi.js";
 import { Scene, SceneManager } from "../core/scene";
 //import { PixiApngAndGif } from 'pixi-apngandgif'; // esperando o desenvolvedor corrigir os bugs
-import { DebugScene } from "./debug-scene";
+import { WarningScene } from "./warning-scene";
 
 export class LoadingScene extends Scene {
 
@@ -41,6 +41,7 @@ export class LoadingScene extends Scene {
       //core
       "./assets/gui/loading.png",
       "./assets/gui/icon.png",
+      "./assets/gui/popup.png",
 
       //seleção de personagens
       "./assets/characters/victor/selection-normal.png",
@@ -67,7 +68,7 @@ export class LoadingScene extends Scene {
       console.log(this.texto.text);
     });
     Global.loader.onComplete.add(() => { //quando chegar a 100%
-      SceneManager.start(new DebugScene());
+      SceneManager.start(new WarningScene());
     });
     Global.loader.load((loader, resource) => { //começa a carregar
     });

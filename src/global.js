@@ -1,3 +1,5 @@
+const { default: TextUtils } = require("./util/textutils");
+
 /**
  * Aqui guardaremos as variáveis mais usadas.
  */
@@ -6,6 +8,7 @@ module.exports = {
   app: undefined,
   canvas: undefined,
   loader: undefined,
+  translation: require(`/assets/txt/${TextUtils.getTranslation()}.json`),
 
   /**
    * propriedades do jogo
