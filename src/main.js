@@ -50,14 +50,7 @@ Global.loader = Global.app.loader;
 document.body.appendChild(Global.canvas);
 
 //ajusta a area do jogo conforme a tela
-window.addEventListener('resize',function(e) {
-  if (Global.screen.static_height < Global.screen.static_width) {
-    Global.canvas.style.width = `${Global.screen.static_width}px`;
-    Global.canvas.style.height = `${Global.screen.static_width / Global.screen.aspect_ratiochrome-unstable}px`
-  } else {
-    Global.canvas.style.height = `${Global.screen.static_height}px`;
-  }
-});
+window.addEventListener('resize',telaCheia);
 
 //prepara os gerenciadores:
 CommandLineManager.setup();
@@ -66,3 +59,22 @@ InputManager.setup();
 
 //inicializa a primeira cena:
 SceneManager.start(new LoadingScene());
+
+function telaCheia() {
+  console.log("Ajuste de tela");
+  Global.screen.static_width = document.documentElement.clientWidth;
+  Global.screen.static_height = document.documentElement.clientHeight;
+
+  // ajuste para telas
+  if (Global.screen.static_height < Global.screen.static_width /2) {
+    var width = Global.screen.static_height * 2;
+    Global.canvas.style.width = `${Global.screen.static_height * 2}px`;//Global.canvas.style.width = `auto`;
+    Global.canvas.style.height = `${Global.screen.static_height}px`;//Global.canvas.style.height = `100%`;
+  } else {
+    var height = Global.screen.static_width / 2;
+    Global.canvas.style.width = `${Global.screen.static_width}px`;//Global.canvas.style.width = `100%`;
+    Global.canvas.style.height = `${height}px`;
+  }
+}
+
+telaCheia();
