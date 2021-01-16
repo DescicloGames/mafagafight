@@ -13,7 +13,7 @@ import * as PIXI from "pixi.js";
 
     this.p1 = new Fighter("cammy");
     this.p1.setControllable(true);
-    this.p1.setMode("nude");
+    //this.p1.setMode("nude");
     this.p1.setPlayer(true);
 
     this.cpu = new Fighter("ryu");
