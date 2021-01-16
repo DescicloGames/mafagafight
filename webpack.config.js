@@ -27,7 +27,7 @@ module.exports = {
     //new MiniCssExtractPlugin({ filename:'styles.[chunkhash].css' }),
     //new CleanWebpackPlugin({ cleanStaleWebpackAssets: false }), //apagando o index.html
     new HtmlWebpackPlugin({
-      title: "MafagaFight · Uma suruba mortal!",
+      title: "MafagaFight · O Jogo da Desciclopédia",
       template: "index.ejs",
       inject: false,
       meta: {
