@@ -3,12 +3,12 @@ const { default: TextUtils } = require("./util/textutils");
 /**
  * Aqui guardaremos as variáveis mais usadas.
  */
-module.exports = {
+var Global = {
   //propriedades vitais:
   app: undefined,
   canvas: undefined,
   loader: undefined,
-  translation: require(`/assets/txt/${TextUtils.getTranslation()}.json`),
+  translation: require(`/assets/code-extras/translation/${TextUtils.getTranslation()}.json`),
 
   /**
    * propriedades do jogo
@@ -22,6 +22,61 @@ module.exports = {
      * setar para 2 para as animações para durarem o dobro do tempo.
      */
     FPS_clock: 1,
+  },
+
+  /**
+   * Predefinições de botões
+   */
+  input: {
+    //jogador 1
+    P1: {
+      up: () => { return Global.ram.input_outputs["KeyW"] },
+      down: () => { return Global.ram.input_outputs["KeyS"] },
+      left: () => { return Global.ram.input_outputs["KeyA"] },
+      right: () => { return Global.ram.input_outputs["KeyD"] },
+
+      A: () => { return Global.ram.input_outputs["KeyJ"] },
+      B: () => { return Global.ram.input_outputs["KeyK"] },
+      R1: () => { return Global.ram.input_outputs["KeyL"] },
+
+      X: () => { return Global.ram.input_outputs["KeyU"] },
+      Y: () => { return Global.ram.input_outputs["KeyI"] },
+      L1: () => { return Global.ram.input_outputs["KeyO"] },
+    },
+
+    //jogador 2
+    P2: {
+      up: () => { return Global.ram.input_outputs["ArrowUp"] } ,
+      down: () => { return Global.ram.input_outputs["ArrowDown"] },
+      left: () => { return Global.ram.input_outputs["ArrowLeft"] },
+      right: () => { return Global.ram.input_outputs["ArrowRight"] },
+
+      A: () => { return Global.ram.input_outputs["Numpad1"] },
+      B: () => { return Global.ram.input_outputs["Numpad2"] },
+      R1: () => { return Global.ram.input_outputs["Numpad3"] },
+
+      X: () => { return Global.ram.input_outputs["Numpad4"] },
+      Y: () => { return Global.ram.input_outputs["Numpad5"] },
+      L1: () => { return Global.ram.input_outputs["Numpad6"] },
+    },
+
+    /**
+     * todos os jogadores, se um apertar, equivale o mesmo que o outro apertar.
+     */
+    all: {
+      up: () => { return Global.input.P1.up() || Global.input.P2.up() },
+      down: () => { return Global.input.P1.down() || Global.input.P2.down() },
+      left: () => { return Global.input.P1.left() || Global.input.P2.left() },
+      right: () => { return Global.input.P1.right() || Global.input.P2.right() },
+
+      A: () => { return Global.input.P1.A() || Global.input.P2.A() },
+      B: () => { return Global.input.P1.B() || Global.input.P2.B() },
+      R1: () => { return Global.input.P1.R1() || Global.input.P2.R1() },
+
+      X: () => { return Global.input.P1.X() || Global.input.P2.X() },
+      Y: () => { return Global.input.P1.Y() || Global.input.P2.Y() },
+      L1: () => { return Global.input.P1.L1() || Global.input.P2.L1() },
+    }
   },
 
   /**
@@ -50,5 +105,7 @@ module.exports = {
   ram: {
     actual_scene: null, //estado atual da cena em execução.
     input_outputs: {},  //estado atual do mapeamento de teclas. são booleanas.
-  }
-}
+   }
+};
+
+module.exports = Global;

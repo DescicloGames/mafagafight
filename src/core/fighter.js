@@ -19,6 +19,7 @@ export class Fighter {
     this.properties = this.getStatus();
     this.callback = this.properties.animation;
     this.pressed = {};
+    this.controllable = false;
     this.player = false;
 
     if (this.properties.pre_frame) {
@@ -56,12 +57,28 @@ export class Fighter {
     if (player) {
       this.player = true;
       this.sprite.position.x = (Global.screen.width / 2) - 150; // posiciona no lugar do player
+
+      if (this.controllable) {
+        this.controller = Global.input.P1;
+      }
     } else {
       this.player = false;
       this.sprite.position.x = (Global.screen.width / 2) + 150; // posiciona no lugar do inimigo
       this.sprite.scale.x = -1; //inverte a sprite
       this.flipped = true;
+
+      if (this.controllable) {
+        this.controller = Global.input.P2;
+      }
     }
+  }
+
+  /**
+   * 
+   * @param {Boolean} controllable 
+   */
+  setControllable(controllable) {
+    this.controllable = controllable;
   }
 
   /**
@@ -144,21 +161,30 @@ export class Fighter {
   /**
    * se for um jogador, procura por teclas apertadas
    */
-  checkMovement(keys) {
-    if (this.player) {
-        if (keys["d"] | keys["D"]) {
-          if (!Global.game.PAUSED && typeof(this.callback[this.mode]["walkfront"]) != "undefined") {
-            this.action = "walkfront";
+  async checkMovement(keys) {
+    if (this.controllable) {
+        if (this.controller.right()) {
+          var front = "";
+
+          if (!this.flipped) {
+            front = "walkfront";
+            this.sprite.x += 1 + this.properties.modes[this.mode].SPD;
+          } else {
+            front = "walkback";
+            this.sprite.x -= 1 + this.properties.modes[this.mode].SPD;
+          }
+
+          if (!Global.game.PAUSED && typeof(this.callback[this.mode][front]) != "undefined") {
+            this.action = front;
             if (!this.pressed["d"]) {
               clearInterval(this.animation);
-              console.log("ex");
+
               this.sprite.texture = this.getActualTexture();
               //628541
-              this.animation = (this.callback[this.mode]["walkfront"])(this); //acho que o nome disso é encapsulamento de função. fiz isso para evitar o eval, que n suporta ES2021
+              this.animation = (this.callback[this.mode][front])(this); //acho que o nome disso é encapsulamento de função. fiz isso para evitar o eval, que n suporta ES2021
             }
 
             this.pressed["d"] = true;
-            this.sprite.x += 1 + this.properties.modes[this.mode].SPD;
           }
         } else {
           if (this.pressed["d"]) {

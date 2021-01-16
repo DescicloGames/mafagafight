@@ -25,6 +25,7 @@
   "homepage": "https://github.com/EduApps-CDG/mafagafos-desktop#readme",
   "devDependencies": {
     "@babel/core": "^7.12.10",
+    "@babel/plugin-proposal-class-properties": "^7.12.1",
     "@babel/plugin-transform-runtime": "^7.12.10",
     "@babel/preset-env": "^7.12.10",
     "@webpack-cli/init": "^1.0.3",

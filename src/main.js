@@ -1,9 +1,10 @@
 // importa as classes:
 import * as PIXI from "pixi.js";
-import * as Global from "./global";
+import Global from "./global";
 import { InputManager } from "./core/input";
 import { SceneManager } from "./core/scene";
 import { LoadingScene } from "./scene/loading-scene";
+import { CommandLineManager } from "./core/commandline";
 
 /**
  * Cria um novo app com determinadas configurações (parâmetro).
@@ -59,6 +60,7 @@ window.addEventListener('resize',function(e) {
 });
 
 //prepara os gerenciadores:
+CommandLineManager.setup();
 SceneManager.setup();
 InputManager.setup();
 

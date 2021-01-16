@@ -40,7 +40,12 @@ module.exports = {
     rules: [{
       test: /\.(js|jsx)$/,
       include: [path.resolve(__dirname, 'src')],
-      loader: 'babel-loader'
+      loader: 'babel-loader',
+      options: {
+          "plugins": [
+            ["@babel/plugin-proposal-class-properties", {loose:true}]
+          ]
+      }
     }, {
       test: /\.css$/,
       include: [path.resolve(__dirname, 'css')],

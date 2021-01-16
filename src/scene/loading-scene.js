@@ -1,4 +1,4 @@
-import * as Global from "../global";
+import Global from "../global";
 import * as PIXI from "pixi.js";
 import { Scene, SceneManager } from "../core/scene";
 //import { PixiApngAndGif } from 'pixi-apngandgif'; // esperando o desenvolvedor corrigir os bugs

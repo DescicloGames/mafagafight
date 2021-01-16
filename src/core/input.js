@@ -34,7 +34,7 @@ export class InputManager {
    * @param {KeyboardEvent} event 
    */
   static keyPressed(event) {
-    Global.ram.input_outputs[event.key] = true;
+    Global.ram.input_outputs[event.code] = true;
   }
 
   /**
@@ -43,7 +43,7 @@ export class InputManager {
    * @param {KeyboardEvent} event 
    */
   static keyReleased(event) {
-    Global.ram.input_outputs[event.key] = false;
+    Global.ram.input_outputs[event.code] = false;
   }
 
   /**
