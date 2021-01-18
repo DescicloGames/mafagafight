@@ -1,8 +1,8 @@
 # Lista de Personagens
 Aqui estão a lista de personagens do jogo:
 
-- [ ] Cammy (Street Fighter by Capcom)
-- [ ] Ryu (Street Fighter by Capcom)
+- [X] Cammy (Street Fighter by Capcom)
+- [X] Ryu (Street Fighter by Capcom)
 - [ ] Mafagafo (Desciclopédia)
 - [ ] Xerox Holmes (DescicloTV)
 - [ ] Rambo
