@@ -12,6 +12,7 @@ Aqui estão a lista de personagens do jogo:
 - [ ] Victor Hedgehog (DescicloTV / Desciclopédia)
 - [ ] Cabaré-Leg (DescicloTV / Desciclopédia)
 - [ ] Cabaré-Leg (modo **CAGARÉ**) (DescicloTV / Desciclopédia)
+- [ ] Mileena (Mortal Kombat)
 
 ## Clássicos da Desciclopédia
 
