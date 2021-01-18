@@ -1,0 +1,31 @@
+== Producer
+Eduardo Procópio Gomez
+Arthur Cândido Regueira
+
+== Game Engineers
+Eduardo Procópio Gomez
+
+== Web Designer/UX Designer
+Arthur Cândido Regueira
+
+== Background Design
+Acre:Eduardo Procópio Gomez
+
+== Characters Design
+Ryu:Capcom
+Cammy White:Capcom
+Cabaré-Leg:Victor Hedgehog
+Victor Hedgehog:Victor Hedgehog
+
+== Voice Actors
+Ninguém:Ninguém
+
+== Music setlist
+Nada:Ninguém
+
+== Special Thanks
+Nicolae (Xelu) Berbece:Gamepad buttons
+
+== MafagaFight
+Made under GPLv3 License. All the resources are
+owned by their respective owners.
