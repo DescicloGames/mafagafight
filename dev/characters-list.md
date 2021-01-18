@@ -13,6 +13,9 @@ Aqui estão a lista de personagens do jogo:
 - [ ] Cabaré-Leg (DescicloTV / Desciclopédia)
 - [ ] Cabaré-Leg (modo **CAGARÉ**) (DescicloTV / Desciclopédia)
 - [ ] Mileena (Mortal Kombat)
+- [ ] Hitler (Segunda Guerra Mundial)
+- [ ] Goku Negro (Dragon Ball Z)
+- [ ] Obama (USA)
 
 ## Clássicos da Desciclopédia
 
