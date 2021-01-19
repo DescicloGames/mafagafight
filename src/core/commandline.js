@@ -13,6 +13,16 @@ export class CommandLineManager {
 
   static async liveUpdate() {
     return setInterval(() => {
+      /*if (window.scene != Global.ram.actual_scene && window.scene) {
+        Global.ram.actual_scene = window.scene;
+      }*/
+
+      if (window.RAM) {
+        if (window.RAM.IO != Global.ram.input_outputs && window.RAM.IO) {
+          Global.ram.input_outputs = window.RAM.IO;
+        }
+      }
+
       window.scene = Global.ram.actual_scene;
       window.game_state = Global.game;
 

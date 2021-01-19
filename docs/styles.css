@@ -2,6 +2,9 @@
   margin: 0;
   padding: 0;
   border: 0;
+  overflow:hidden;
+  overflow-y: hidden;
+  overflow-x: hidden;
 }
 
 html,body{
@@ -12,6 +15,7 @@ html,body{
 }
 
 #centralizador {
+  overflow:hidden;
   min-height:100%;
   min-width:100%;
   height:auto;
@@ -24,6 +28,7 @@ html,body{
 }
 
 canvas {
+  overflow:hidden;
   position: fixed;
   left: 0;
   right: 0;

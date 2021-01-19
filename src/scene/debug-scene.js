@@ -1,15 +1,19 @@
 import { Scene } from "../core/scene";
 import { Fighter } from "../core/fighter";
 import * as PIXI from "pixi.js";
+import Global from "../global";
 
 /**
  * Altere como quiser, esta cena será deletada
  * na versão final.
  */
  export default class DebugScene extends Scene {
+
   constructor() {
     super();
     console.log("DebugScene");
+
+    this.bg = new PIXI.Sprite(Global.loader.resources["./assets/scenes/acre/bg.png"].texture);
 
     this.p1 = new Fighter("cammy");
     this.p1.setControllable(true);
@@ -23,6 +27,7 @@ import * as PIXI from "pixi.js";
 
    draw() {
     super.draw();
+    Global.app.stage.addChild(this.bg);
     this.cpu.draw();
     this.p1.draw();
    }
