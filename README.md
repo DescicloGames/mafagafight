@@ -66,6 +66,7 @@ We are normal people (like you), or not,  our team is composed by:
 * Arthur C (TuzinRS)
 * Eduardo P (EduApps)
 * Smalkade K (Smalkade)
+* Victor Hedgehog
 
 Want to code with us? Please, open an Issue or mail [eduardoprocopiogomes@gmail.com](mailto:eduardoprocopiogomes@gmail.com) 
 
