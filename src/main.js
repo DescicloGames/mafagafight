@@ -5,6 +5,22 @@ import { InputManager } from "./core/input";
 import { SceneManager } from "./core/scene";
 import { LoadingScene } from "./scene/loading-scene";
 import { CommandLineManager } from "./core/commandline";
+import NativesSimulator from "./core/natives-simulator";
+
+/**
+ * Importa variáveis nativas do programa, caso esteja instalado.
+ * Caso contrário, usará variáveis pré gravadas.
+ * 
+ * OBS: Variável nativa implementada no app e no executável.
+ * @see https://github.com/DescicloGames/mafagafight-android/blob/main/app/src/main/java/net/eduapps/mafagafight/Natives.java
+ */
+try {
+  console.log("Usando a aplicação nativa via " + Natives.OS());
+  Global.natives = Natives;
+} catch(e) {
+  console.warn("Usando a aplicação web, alguns recursos não estarão disponíveis");
+  new NativesSimulator();
+}
 
 /**
  * Cria um novo app com determinadas configurações (parâmetro).
@@ -57,9 +73,6 @@ CommandLineManager.setup();
 SceneManager.setup();
 InputManager.setup();
 
-//inicializa a primeira cena:
-SceneManager.start(new LoadingScene());
-
 function telaCheia() {
   console.log("Ajuste de tela");
   Global.screen.static_width = document.documentElement.clientWidth;
@@ -68,13 +81,17 @@ function telaCheia() {
   // ajuste para telas
   if (Global.screen.static_height < Global.screen.static_width /2) {
     var width = Global.screen.static_height * 2;
-    Global.canvas.style.width = `${Global.screen.static_height * 2}px`;//Global.canvas.style.width = `auto`;
-    Global.canvas.style.height = `${Global.screen.static_height}px`;//Global.canvas.style.height = `100%`;
+    Global.canvas.style.width = `${Global.screen.static_height * 2}px`;
+    Global.canvas.style.height = `${Global.screen.static_height}px`;
   } else {
     var height = Global.screen.static_width / 2;
-    Global.canvas.style.width = `${Global.screen.static_width}px`;//Global.canvas.style.width = `100%`;
+    Global.canvas.style.width = `${Global.screen.static_width}px`;
     Global.canvas.style.height = `${height}px`;
   }
 }
 
 telaCheia();
+
+
+//inicializa a primeira cena:
+SceneManager.start(new LoadingScene());

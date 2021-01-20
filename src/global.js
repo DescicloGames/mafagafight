@@ -105,7 +105,39 @@ var Global = {
   ram: {
     actual_scene: null, //estado atual da cena em execução.
     input_outputs: {},  //estado atual do mapeamento de teclas. são booleanas.
-   }
+  },
+
+  /**
+   * Variável de integração nativa.
+   * Tudo o que está aqui dentro acontece quando executado em
+   * navegadores. Diferente de dispositivos android que possui suporte á varias
+   * coisas.
+   */
+  natives: {
+    /**
+     * Retorna o nome do Sistema Operacional ("Browser", caso esteja num navegador)
+     * 
+     * @return "Browser" || "Android" || "Windows" || "Linux" || "Darwin"
+     */
+    OS: function() {
+      return "Browser";
+    },
+
+    /**
+     * Verifica se o dispositivo pode vibrar, no caso dos Browsers não.
+     */
+    canDeviceVibrate: function() {
+      return false;
+    },
+
+    /**
+     * Verifica se o controle pode vibrar, no caso dos Browsers não
+     * é possivel nem utilizar o controle.
+     */
+    canControllerVibrate: function() {
+      return false;
+    }
+  }
 };
 
 module.exports = Global;
