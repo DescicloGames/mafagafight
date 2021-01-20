@@ -16,6 +16,10 @@ Aqui estão a lista de personagens do jogo:
 - [ ] Hitler (Segunda Guerra Mundial)
 - [ ] Goku Negro (Dragon Ball Z)
 - [ ] Obama (USA)
+- [ ] Ciro Gomes (Brasil)
+- [ ] Ednaldo Pereira (Memes BR)
+- [ ] Jailson Mendes (Memes BR)
+- [ ] Lindomar (Memes BR)
 
 ## Clássicos da Desciclopédia
 
