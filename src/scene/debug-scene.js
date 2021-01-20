@@ -15,6 +15,7 @@ import Global from "../global";
 
     this.bg = new PIXI.Sprite(Global.loader.resources["./assets/scenes/acre/bg.png"].texture);
     this.ground = new PIXI.Sprite(Global.loader.resources["./assets/scenes/acre/ground.png"].texture);
+    //setar a posição
 
     this.p1 = new Fighter("cammy");
     this.p1.setControllable(true);
