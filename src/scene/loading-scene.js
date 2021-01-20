@@ -61,7 +61,8 @@ export class LoadingScene extends Scene {
       "./assets/characters/cammy/walkfront-white.png",
 
       //cenas
-      "./assets/scenes/acre/bg.png"
+      "./assets/scenes/acre/bg.png",
+      "./assets/scenes/acre/ground.png"
     ]);
     Global.loader.onProgress.add((loader, resource) => {
       this.texto.text = `${Math.round(loader.progress)}%`;

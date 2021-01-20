@@ -14,6 +14,7 @@ import Global from "../global";
     console.log("DebugScene");
 
     this.bg = new PIXI.Sprite(Global.loader.resources["./assets/scenes/acre/bg.png"].texture);
+    this.ground = new PIXI.Sprite(Global.loader.resources["./assets/scenes/acre/ground.png"].texture);
 
     this.p1 = new Fighter("cammy");
     this.p1.setControllable(true);
@@ -27,7 +28,7 @@ import Global from "../global";
 
    draw() {
     super.draw();
-    Global.app.stage.addChild(this.bg);
+    Global.app.stage.addChild(this.bg,this.ground);
     this.cpu.draw();
     this.p1.draw();
    }
