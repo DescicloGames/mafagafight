@@ -20,6 +20,10 @@ Aqui estão a lista de personagens do jogo:
 - [ ] Ednaldo Pereira (Memes BR)
 - [ ] Jailson Mendes (Memes BR)
 - [ ] Lindomar (Memes BR)
+- [ ] Zeta (Project X)
+- [ ] Nipponjinn (DescicloTV)
+- [ ] Awakened Nipponjinn (DescicloTV)
+- [ ] Seu Madruga (El Chavo del Ocho)
 
 ## Clássicos da Desciclopédia
 
