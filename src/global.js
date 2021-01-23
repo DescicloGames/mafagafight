@@ -14,6 +14,7 @@ var Global = {
    * propriedades do jogo
    */
   game: {
+    DEBUG: true,
     PAUSED: false,
     /**
      * setar para 0 para entrar no modo benchmark.

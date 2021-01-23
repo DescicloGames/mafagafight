@@ -3,6 +3,7 @@ import * as PIXI from "pixi.js";
 import Global from "../global";
 import DebugScene from "./debug-scene";
 import TextUtils from "../util/textutils";
+import DebugSelectionScene from "./debugselection-scene";
 
 /**
  * Altere como quiser, esta cena será deletada
@@ -28,7 +29,13 @@ import TextUtils from "../util/textutils";
     this.title.anchor.set(0.5, 1); //parecido com imagem.pivot
     this.title.position.set(Global.screen.width / 2, 55);
 
-    this.press = new PIXI.Text(TextUtils.parseAll(this.translate["press"], `J ${this.gtranslate["or"]} 1`),{ fill: 0xFFFFFF, fontSize: 18 }); // 0xFA8916
+    var text = `J ${this.gtranslate["or"]} 1`;
+
+    if (Global.natives.OS() == "Android") {
+      text = "A";
+    }
+
+    this.press = new PIXI.Text(TextUtils.parseAll(this.translate["press"], text),{ fill: 0xFFFFFF, fontSize: 18 }); // 0xFA8916
     this.press.anchor.set(0.5, 0); //parecido com imagem.pivot
     this.press.position.set(Global.screen.width / 2, Global.screen.height - 55);
  
@@ -91,7 +98,11 @@ import TextUtils from "../util/textutils";
    
           if (this.done) {
             clearInterval(this.animation);
-            SceneManager.start(new DebugScene());
+            if (Global.game.DEBUG) {
+              SceneManager.start(new DebugSelectionScene());
+            } else {
+              SceneManager.start(new DebugScene());
+            }
           }
         },Global.screen.FPS60);
       }

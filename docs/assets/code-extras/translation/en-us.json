@@ -4,6 +4,14 @@
     "text": "This game may contain scenes not recommended for children under 17.\n\nIt may contain nudists, implicit sex and derivatives.",
     "press": "Press %% to continue"
   },
+
+  "debugselection-scene": {
+    "title": "Debug mode",
+    "options": [
+      "Test scene",
+      "Main menu"
+    ]
+  },
   
   "global": {
     "or": "or"
