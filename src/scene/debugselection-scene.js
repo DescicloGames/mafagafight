@@ -169,6 +169,7 @@ export default class DebugSelectionScene extends Scene {
               this.selectionState = 1;
               this.selectionannimdone = true;
               clearInterval(this.selectionannim);
+              Global.natives.deviceVibrate(50);
             }
           }
         }, Global.screen.FPS60);

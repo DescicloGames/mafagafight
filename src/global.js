@@ -137,6 +137,10 @@ var Global = {
      */
     canControllerVibrate: function() {
       return false;
+    },
+
+    deviceVibrate: function(num) {
+      console.warn("dispositivo não pode vibrar");
     }
   }
 };
