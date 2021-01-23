@@ -27,7 +27,6 @@ Aqui estão a lista de personagens do jogo:
 - [ ] Steve (Minecraft)
 
 ## Clássicos da Desciclopédia
-
 - [ ] Tua Mãe (Vários tons de pele)
 - [ ] Teu Pai (Vários tons de pele)
 - [ ] Emo (Branco/pardo)
