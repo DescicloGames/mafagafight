@@ -12,6 +12,9 @@ html,body{
   height:100%;
   overflow:hidden;
   background-color: #000000;
+
+  /*Se liga só no nome da cor*/
+  color: #BABACA;
 }
 
 #centralizador {
@@ -24,7 +27,6 @@ html,body{
   top:-100%; bottom:-100%;
   left:-100%; right:-100%;
   margin:auto;
-  background-color: #000000;
 }
 
 canvas {
