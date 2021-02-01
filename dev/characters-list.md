@@ -5,7 +5,7 @@ Aqui estão a lista de personagens do jogo:
 - [X] Ryu (Street Fighter by Capcom)
 - [ ] Mafagafo (Desciclopédia)
 - [ ] Xerox Holmes (DescicloTV)
-- [ ] Rambo
+- [ ] Rambo // **Rever**, copyright
 - [ ] Valois (DescicloTV / Desciclopédia)  
 - [ ] Capitão Nascimento (Tropa de Elite)
 - [ ] TuzinRS (DescicloTV)
@@ -13,12 +13,10 @@ Aqui estão a lista de personagens do jogo:
 - [ ] Cabaré-Leg (DescicloTV / Desciclopédia)
 - [ ] Cabaré-Leg (modo **CAGARÉ**) (DescicloTV / Desciclopédia)
 - [ ] Mileena (Mortal Kombat)
-- [ ] Hitler (Segunda Guerra Mundial)
 - [ ] Goku Negro (Dragon Ball Z)
 - [ ] Obama (USA)
 - [ ] Ciro Gomes (Brasil)
 - [ ] Ednaldo Pereira (Memes BR)
-- [ ] Jailson Mendes (Memes BR)
 - [ ] Lindomar (Memes BR)
 - [ ] Zeta the Echidna (Project X)
 - [ ] Nipponjinn (DescicloTV)
@@ -31,3 +29,5 @@ Aqui estão a lista de personagens do jogo:
 - [ ] Teu Pai (Vários tons de pele)
 - [ ] Emo (Branco/pardo)
 - [ ] Você (Azul ou Vermelho)
+- [ ] Hitler (Segunda Guerra Mundial)
+- [ ] Jailson Mendes (Memes BR)
