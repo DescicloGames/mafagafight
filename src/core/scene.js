@@ -13,8 +13,7 @@ export class Scene {
 
   constructor() { } //chamada antes de tudo.
   async draw() { }    //esta função é chamada 60 vezes por segundo. ;)
-  async onInput(keys) {
-  }
+  async onInput(keys) { }
   destroy() { }     //ultima função chamada pela cena.
 
   //==============================
