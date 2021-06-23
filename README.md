@@ -7,9 +7,6 @@ Actually this project use JavaScript with [PIXI.JS](https://www.pixijs.com/) (PI
 * `WASD` or `Arrows` - move;
 * `J` or `NUMPAD_1` - low lick;
 
-#### Notice¹:
-In Dec 10 of 2020 we had decided to re-create the project, if you want to use C and SDL2 based version fell free for create a fork or download some oldest commit, thanks for all contributions so far.
-
 #### Notice²:
   This file (README.md) can be altered without previously warn.
   
